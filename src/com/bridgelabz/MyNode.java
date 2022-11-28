@@ -42,7 +42,7 @@ public class MyNode <K>{
         MyNode<Integer> firstNode = new MyNode<>(50);
         MyNode<Integer> secondNode = new MyNode<>(60);
         MyNode<Integer> thirdNode = new MyNode<>(70);
-        
+
         firstNode.setNext(secondNode);
         secondNode.setNext(thirdNode);
 
