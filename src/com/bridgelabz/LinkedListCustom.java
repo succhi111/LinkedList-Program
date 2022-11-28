@@ -56,11 +56,8 @@ public class LinkedListCustom {
     }
 
 
-
     public void dispalyLinkedList(){
         System.out.println("My list=  "+head);
     }
-
-
 
 }
