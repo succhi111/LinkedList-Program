@@ -1,51 +1,44 @@
 package com.bridgelabz;
 
-public class MyNode <K>{
-    private K key;         //store data
-    private MyNode next;     //store adress of next
+public class MyNode<K> implements INode<K> {
 
-    //creating constructor for one node
+    private K key;
+    private INode<K> next;
+
 
 
     public MyNode(K key) {
+        super();
         this.key = key;
-        this.next =null;
+        this.next = null;
     }
 
-    //creating geters and setters
+
+
+    @Override
     public K getKey() {
         return key;
     }
-
-    public void setKey(K key) {
+    @Override
+    public void setKey(K Key) {
         this.key = key;
-    }
 
-    public MyNode getNext() {
+    }
+    @Override
+    public INode getNext() {
+        // TODO Auto-generated method stub
         return next;
     }
-
-    public void setNext(MyNode next) {
+    @Override
+    public void setNext(INode next) {
         this.next = next;
+
     }
 
     @Override
     public String toString() {
-        return "MyNode{" +
-                "key=" + key +
-                ", next=" + next +
-                '}';
-    }
-
-    public static void main(String[] args) {
-        // creating object and assigning values to the node
-        MyNode<Integer> firstNode = new MyNode<>(50);
-        MyNode<Integer> secondNode = new MyNode<>(60);
-        MyNode<Integer> thirdNode = new MyNode<>(70);
-        
-        firstNode.setNext(secondNode);
-        secondNode.setNext(thirdNode);
-
-        System.out.println(firstNode);
+        return
+                key +"-->"
+                        + next ;
     }
 }
