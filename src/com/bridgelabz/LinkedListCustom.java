@@ -12,26 +12,7 @@ public class LinkedListCustom {
         this.tail = null;
     }
 
-    public void add(INode newNode) {   // newNode is variable
-
-        // 56-30-70
-
-        // node 70 create karo
-        // add 30 and then 56
-
-        /*
-         *   head --->70
-         *
-         *   head -- xxx--->70
-         *
-         *   head--> [30] ---> 70
-         *
-         *   head--xxx---> 30 ---> 70
-         *
-         *   head --> [56] ---> 30 ---->70
-         *
-         *
-         */
+    public void add(INode newNode) {   // newNode variable
 
         if (this.tail == null) {
             this.tail = newNode;
@@ -46,18 +27,7 @@ public class LinkedListCustom {
         }
     }
     public void append(INode newNode){
-        // 56-30-70
 
-        /*
-         *   head --->56
-         *
-         *   head -->  56-->xxx--->tail
-         *
-         *   head--> 56 ---> 30--->xxx--->tail
-         *
-         *   head-->56--->30-->70--->tail
-
-         */
         if(this.tail == null) {
             this.tail = newNode;
         }
@@ -74,6 +44,22 @@ public class LinkedListCustom {
         INode tempNode = previousnode.getNext();
         previousnode.setNext(newNode);
         newNode.setNext(tempNode);
+    }
+
+    public  INode pop(){
+        INode tempNode = this.head;
+        this.head =this.head.getNext();
+        return tempNode;
+    }
+    public INode popLast(){
+        INode tempNode= this.head;
+        while (!tempNode.getNext().equals(tail)){
+            tempNode=tempNode.getNext();
+        }
+        this.tail=tempNode;
+        tempNode=tempNode.getNext();
+        this.tail.setNext(null);
+        return tempNode;
     }
     public void dispalyLinkedList(){
 
