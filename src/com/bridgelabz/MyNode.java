@@ -5,15 +5,11 @@ public class MyNode<K> implements INode<K> {
     private K key;
     private INode<K> next;
 
-
-
     public MyNode(K key) {
         super();
         this.key = key;
         this.next = null;
     }
-
-
 
     @Override
     public K getKey() {

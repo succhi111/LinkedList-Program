@@ -17,7 +17,7 @@ public class LinkedListMain {
 
         listnew.dispalyLinkedList();
 
-        INode deleteNode=listnew.pop();
+        INode deleteNode=listnew.popLast();
         System.out.println("After deletion list is =" +deleteNode.getKey());
         listnew.dispalyLinkedList();
     }

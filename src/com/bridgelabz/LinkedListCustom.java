@@ -51,6 +51,16 @@ public class LinkedListCustom {
         this.head =this.head.getNext();
         return tempNode;
     }
+    public INode popLast(){
+        INode tempNode= this.head;
+        while (!tempNode.getNext().equals(tail)){
+            tempNode=tempNode.getNext();
+        }
+        this.tail=tempNode;
+        tempNode=tempNode.getNext();
+        this.tail.setNext(null);
+        return tempNode;
+    }
     public void dispalyLinkedList(){
 
         System.out.println("My list=  "+head);
