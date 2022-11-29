@@ -70,7 +70,11 @@ public class LinkedListCustom {
             this.tail=newNode;
         }
     }
-
+    public void insert(INode previousnode, INode newNode) {
+        INode tempNode = previousnode.getNext();
+        previousnode.setNext(newNode);
+        newNode.setNext(tempNode);
+    }
     public void dispalyLinkedList(){
 
         System.out.println("My list=  "+head);
